@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "Lauch Chrome",
+        "file": "${workspaceRoot}/index.html"
+      },
+      {
+        "firefoxExecutable": "C:\\Users\\basterra.alain\\AppData\\Local\\Mozilla Firefox\\firefox.exe",
+        "name": "Lauch Firefox",
+          "type": "firefox",
+          "request": "launch",
+          "reAttach": true,
+          "file": "${workspaceRoot}/index.html"
+      }
+    ]
+  }
+  
