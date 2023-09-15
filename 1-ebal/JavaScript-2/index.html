@@ -10,10 +10,22 @@
       nodo.onmouseover = function () {
         this.style.color = "blue";
       };
+      nodo.onmouseout = function () {
+        this.style.color = "red";
+      };
     </script>
-    <img src="1.gif" id="img1" />
+    <img src="./image/html.gif" id="img1" />
     <script>
-      setTimeout("document.getElementById('img1').src='2.gif'", 1000);
+      var x = 0;
+      setInterval(function () {
+        var imgElement = document.getElementById("img1");
+        if (x % 2 == 0) {
+          imgElement.src = "./image/js.gif";
+        } else {
+          imgElement.src = "./image/html.gif";
+        }
+        x++;
+      }, 1000);
     </script>
   </body>
 </html>
