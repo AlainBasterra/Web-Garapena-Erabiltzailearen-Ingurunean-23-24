@@ -65,14 +65,17 @@ function LiburuakIrakurrita() {
     new Liburua("Liburua5", "Haritz", false),
     new Liburua("Liburua6", "Aitzol", false),
   ];
-
+  var erantzuna = "";
   for (var liburua of liburuak) {
     if (liburua.irakurrita) {
-      alert("Liburu hau irakurrita daukazu, titulua: " + liburua.titulua + " autorea: " + liburua.autorea);
+      textua = "Liburu hau irakurrita daukazu, titulua: " + liburua.titulua + " autorea: " + liburua.autorea;
+      alert(textua);
+      erantzuna += "<p> • " + textua + "</p>";
     } else {
-      alert("Liburu hau irakurri behar duzu, titulua: " + liburua.titulua + " autorea: " + liburua.autorea);
+      textua = "Liburu hau irakurri behar duzu, titulua: " + liburua.titulua + " autorea: " + liburua.autorea;
+      alert(textua);
+      erantzuna += "<p> • " + textua + "</p>";
     }
-    
-    console.log("Título: " + liburua.titulua);
   }
+  return erantzuna;
 }
