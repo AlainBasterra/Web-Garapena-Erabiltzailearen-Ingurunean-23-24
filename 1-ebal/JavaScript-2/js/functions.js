@@ -81,3 +81,28 @@ function bidali() {
 
   return false;
 }
+
+// Gertaerak.html
+function argazkiaGehitu() {
+  var elementua = document.getElementById("balioa");
+  var balioa = parseInt(elementua.getAttribute("data-num")); // Convierte el atributo en un número
+
+  var irudia0 = "./image/bull.jpg";
+  var irudia1 = "./image/buleria buleria.jpg";
+  var irudia2 = "./image/carmen.jpg";
+  var irudia3 = "./image/binladen.jpg";
+
+  var irudiak = [irudia0, irudia1, irudia2, irudia3];
+  
+  if (balioa >= 0 && balioa < irudiak.length) {
+    var irudia = document.createElement("img");
+    irudia.src = irudiak[balioa];
+    
+    var irudiakDiv = document.getElementById("irudiak");
+    irudiakDiv.appendChild(irudia); 
+  }
+}
+
+
+
+//document.body.removeChild(irudia)
