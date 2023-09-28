@@ -85,7 +85,8 @@ function bidali() {
 // Gertaerak.html
 function argazkiaGehitu() {
   var elementua = document.getElementById("balioa");
-  var balioa = parseInt(elementua.getAttribute("data-num")); // Convierte el atributo en un número
+  var balioa = parseInt(elementua.getAttribute("data-num")); // 
+  elementua.setAttribute("data-num", balioa + 1);
 
   var irudia0 = "./image/bull.jpg";
   var irudia1 = "./image/buleria buleria.jpg";
@@ -97,12 +98,14 @@ function argazkiaGehitu() {
   if (balioa >= 0 && balioa < irudiak.length) {
     var irudia = document.createElement("img");
     irudia.src = irudiak[balioa];
-    
+    irudia.style.width = "360px"; 
+    irudia.style.height = "360px";
     var irudiakDiv = document.getElementById("irudiak");
+
+    irudia.addEventListener("click", function () {
+      irudiakDiv.removeChild(irudia);
+    });
+
     irudiakDiv.appendChild(irudia); 
   }
 }
-
-
-
-//document.body.removeChild(irudia)
