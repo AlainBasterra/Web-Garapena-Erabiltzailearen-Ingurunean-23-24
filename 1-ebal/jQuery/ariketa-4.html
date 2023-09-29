@@ -12,17 +12,28 @@
 <body>
     <container>
         <div style="margin-top: 80px;">
-            <div class="m-auto border border-dark" style="width: 1000px;">
+            <div class="m-auto" style="width: 1000px;">
                 <div class="row">
-                    <form action="">
+                    <form class="mb-4" onsubmit="return Bidali();">
                         <div class="col-12">
-                            <p>Saskia egiteko aplikazioa. Idatzi zure erosketak:</p>
+                            <p class="h4">Saskia egiteko aplikazioa. Idatzi zure erosketak:</p>
                         </div>
                         <div class="col-12">
-                            <p>Saskira gehitzeko:</p> <input type="text" name="produktua" id="produktua">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="produktua" id="produktua" placeholder="Saskira gehitzeko" required>
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary" type="button" onclick="ProduktuaGehitu()">Gehitu</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-12"><button onclick="">Gehitu</button> <button type="submit">Erosketa egin</button></div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Erosketa egin</button>
+                        </div>
                     </form>
+                    
+                    <div id="plista">
+
+                    </div>
                 </div>
             </div>
         </div>
