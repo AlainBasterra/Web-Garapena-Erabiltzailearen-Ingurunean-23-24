@@ -8,13 +8,12 @@ function ProduktuaGehitu() {
   return false;
 }
 
-function Bidali(){
-    $("#plista").css("background-color", "green");
-    $("#plista").css("color", "white");
-    alert("Zure erosketa listo dago.");
-    return false;
+function Bidali() {
+  $("#plista").css("background-color", "green");
+  $("#plista").css("color", "white");
+  alert("Zure erosketa listo dago.");
+  return false;
 }
-
 
 // ariketa-6.html
 $(document).ready(function () {
@@ -52,5 +51,13 @@ $(document).ready(function () {
       "kohete-gora kohete-eskuma kohete-behera kohete-ezkerra"
     );
     kohete.addClass(currentRotation);
+  });
+});
+
+// ariketa-8.html
+$(document).ready(function () {
+  $("#esteka").click(function (evento) {
+    evento.preventDefault();
+    $("#kapa").load("ajax/edukia-ajax.html");
   });
 });
