@@ -1,31 +1,30 @@
 <html>
-  <head>
-    <title>Objektuak eta propietateak</title>
-  </head>
-  <body>
-    <h3 id="intro">Introducción</h3>
-    <script>
-      var nodo = document.getElementById("intro");
-      nodo.style.color = "red";
-      nodo.onmouseover = function () {
-        this.style.color = "blue";
-      };
-      nodo.onmouseout = function () {
-        this.style.color = "red";
-      };
-    </script>
-    <img src="./image/html.gif" id="img1" />
-    <script>
-      var x = 0;
-      setInterval(function () {
-        var imgElement = document.getElementById("img1");
-        if (x % 2 == 0) {
-          imgElement.src = "./image/js.gif";
-        } else {
-          imgElement.src = "./image/html.gif";
-        }
-        x++;
-      }, 1000);
-    </script>
-  </body>
+
+<head>
+    <title>Gertaerak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="./js/functions.js"></script>
+</head>
+
+<body>
+    <container>
+        <div style="margin-top: 150px;">
+            <div data-num="0" class="d-none" id="balioa"></div>
+            <div class="row border border-dark m-auto" style="width: 1500px;">
+                <div class="row">
+                    <!-- Botoia -->
+                    <div class="col-12">
+                        <button type="button" class="btn btn-secondary"onclick="argazkiaGehitu()" >Egin klik hemen irudi berri bat agertzeko</button>
+                    </div>
+                    <!-- Irudiak -->
+                    <div class="col-12" id="irudiak">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </container>
+</body>
+
 </html>
