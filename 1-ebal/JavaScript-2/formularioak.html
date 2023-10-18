@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <title>formularioak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="./js/functions.js"></script>
+</head>
+
+<body>
+    <container>
+        <div style="padding-top: 150px;"></div>
+        <div class="m-auto border border-dark" style="width: 1000px;">
+            <div class="row p-2">
+                <div class="col-12">
+                    <h1>DAW klasea</h1>
+                    <h3>Formularioak eta JavaScript</h3>
+                </div>
+                <div class="col-12">
+                    <div class="row p-3">
+                        <div class="col-6">
+                            <div class="row me-1" style="background-color: #c1c7c6; border: 2px solid black;">
+                                <form id="formularioa" onsubmit="return bidali();">
+                                    <!-- Zuzentzeko era -->
+                                    <div class="col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-5">
+                                                <p class="pe-3 text-end" style="font-size: 18px;">Zuzentzeko era</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="zuzentzeko_era" id="radio1" checked>
+                                                            <label class="form-check-label" for="radio1">
+                                                                Jauna
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="zuzentzeko_era" id="radio2">
+                                                            <label class="form-check-label" for="radio2">
+                                                                Anderea
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Izena -->
+                                    <div class="col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-5">
+                                                <p class="pe-3 text-end" style="font-size: 18px;">Izena</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input class="form-control" type="text" name="izena">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Abizena -->
+                                    <div class="col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-5">
+                                                <p class="pe-3 text-end" style="font-size: 18px;">Abizena</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input class="form-control" type="text" name="abizena">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Helbidea -->
+                                    <div class="col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-5">
+                                                <p class="pe-3 text-end" style="font-size: 18px;">Helbidea</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <input class="form-control" type="text" name="helbidea">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Hiria -->
+                                    <div class="col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-5">
+                                                <p class="pe-3 text-end" style="font-size: 18px;">Hiria</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <select class="form-select" name="hiria">
+                                                    <option disabled selected>Aukeratu</option>
+                                                    <option value="Ondarru">Ondarru</option>
+                                                    <option value="Eibar">Eibar</option>
+                                                    <option value="Bilbado">Bilbado</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Gustokoena -->
+                                    <div class="col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-5">
+                                                <p class="pe-3 text-end" style="font-size: 18px;">Gustokoena</p>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="checkbox1">
+                                                            <label class="form-check-label" for="checkbox1">
+                                                                Liburuak
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="checkbox2">
+                                                            <label class="form-check-label" for="checkbox2">
+                                                                Pelikulak
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit/Ezeztatu -->
+                                    <div class="col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-5"></div>
+                                            <div class="col-7">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <button type="submit" class="btn btn-primary">Bidali</button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button type="reset"
+                                                            class="btn btn-secondary float-end">Ezeztatu</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-6">
+                            <!-- Argazkia -->
+                            <div class="col-3">
+                                <div style="width: 125px; height: 125px; border: 2px solid black; overflow: hidden;">
+                                    <img src="./image/galdera_ikurra.jpg" alt=""
+                                        style="width: 100%; height: 100%; object-fit: cover;" id="argazkia">
+                                </div>
+                            </div>
+                            <!-- Datuak  -->
+                            <div class="col-12 mt-3 p-2"
+                                style="background-color: #c1c7c6; border: 2px solid black; height: 67%;">
+                                <strong>Sartu dituzun datuak:</strong>
+                                <div id="datuak"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </container>
+   
+</body>
+
+</html>
