@@ -58,6 +58,6 @@ $(document).ready(function () {
 $(document).ready(function () {
   $("#esteka").click(function (evento) {
     evento.preventDefault();
-    $("#kapa").load("ajax/edukia-ajax.html");
+    $("#kapa").load("..ajax/edukia-ajax.html");
   });
 });
