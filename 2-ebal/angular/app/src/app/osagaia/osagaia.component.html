@@ -1,7 +1,23 @@
 <p>osagaia works!!</p>
 10 + 20 = {{10 + 20}}
 
-<div><h2>{{ getTitle() }} </h2>
+<div>
+    <h2>{{ getTitle() }} </h2>
+    <table>
+        <tbody>
+            <tr *ngFor="let langilea of langileak">
+                <td>{{langilea.izena}}</td>
+                <td>{{langilea.abizena}}</td>
+                <td>{{langilea.generoa}}</td>
+                <td>{{langilea.soldata}}</td>
+                <td>{{langilea.likes}}</td>
+                <td><input type="button" value="Like" (click)="gehituLikes(langilea)" [disabled]="langilea.likes == 10" />
+                <td><input type="button" value="Kontaktatu" [disabled]="!langilea.lanean" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+
     <input [(ngModel)]="langilea.izena">
     <input [(ngModel)]="langilea.abizena">
     <div>
