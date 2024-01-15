@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Item Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">New Item</ion-label>
+    <ion-input [(ngModel)]="newItem" placeholder="Enter new item"></ion-input>
+  </ion-item>
+
+  <ion-buttons slot="end">
+    <ion-button *ngIf="editingIndex === null" (click)="addItem()">Add Item</ion-button>
+    <ion-button *ngIf="editingIndex !== null" (click)="updateItem()">Update Item</ion-button>
+  </ion-buttons>
+
+  <ion-list *ngIf="editingIndex !== null">
+    <ion-item>
+      <ion-label>Editing Item:</ion-label>
+      <ion-label>{{ items[editingIndex] }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Item List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items; let i = index">
+      {{ item }}
+      <ion-buttons slot="end">
+        <ion-button (click)="editItem(i)">Edit</ion-button>
+        <ion-button (click)="deleteItem(i)">Delete</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

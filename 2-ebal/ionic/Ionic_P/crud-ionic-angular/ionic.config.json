@@ -1,0 +1,7 @@
+{
+  "name": "crud-ionic-angular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
